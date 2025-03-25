@@ -8,31 +8,3 @@ body {
 	width: 100%;
 	height: 100vh;
 }
-
-#main {
-	position: relative;
-	width: 100%;
-	height: 100vh;
-}
-
-#fs {
-	width: 100%;
-	height: 100%;
-	background: rgb(52, 52, 52);
-}
-
-#elem {
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-	height: 100px;
-	background-color: rgb(0, 255, 179);
-}
-
-#white {
-	width: 100%;
-	height: 0;
-	position: absolute;
-	bottom: 0;
-	background-color: #dadada;
-}

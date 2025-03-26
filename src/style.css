@@ -1,23 +1,92 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: "Gilroy";
 	box-sizing: border-box;
+	font-family: "Nunito", sans-serif;
 }
 
+html,
 body {
 	width: 100%;
+	height: 100%;
+}
+
+#main {
+	width: 100%;
+}
+
+#loader {
+	width: 100%;
 	height: 100vh;
+	background: #111;
+	color: white;
 }
 
-.parent {
-	display: block;
-	overflow: hidden;
-	background-color: red;
+#loader #topheading {
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	transform: translate(-50%, 0);
 }
 
-.child {
-	font-family: "Courier New", Courier, monospace;
-	display: block;
-	transform: translate(0, 100%);
-	background-color: rgb(255, 0, 0);
+#loader h5 {
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: 300;
 }
+
+#loader h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 4vw;
+	font-weight: 500;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+#loader h1 > span {
+	/* color: #14cf93; */
+}
+
+.reveal .parent {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	overflow-y: hidden;
+}
+.reveal .parent .child {
+	display: block;
+	/* transform: translateY(-70%); */
+}
+
+.parent .child span {
+	display: inline-block;
+}
+
+#green {
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	height: 0vh;
+	background: #14cf93;
+}
+
+/* 
+.eb-garamond-<uniquifier> {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* 
+.nunito-<uniquifier> {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */

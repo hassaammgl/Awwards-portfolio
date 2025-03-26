@@ -22,7 +22,8 @@ for (let i = 0; i < h1Elems.length; i++) {
 }
 
 gsap.to(".child", {
-    duration: 1.5,
+    duration: 1,
     transform: "translate(0, 0%)",
-    ease: "expo.inOut"
+    ease: "expo.inOut",
+    stagger: .2
 })

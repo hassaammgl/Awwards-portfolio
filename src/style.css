@@ -8,3 +8,16 @@ body {
 	width: 100%;
 	height: 100vh;
 }
+
+.parent {
+	display: block;
+	overflow: hidden;
+	background-color: red;
+}
+
+.child {
+	font-family: "Courier New", Courier, monospace;
+	display: block;
+	transform: translate(0, 100%);
+	background-color: rgb(255, 0, 0);
+}

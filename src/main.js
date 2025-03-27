@@ -30,38 +30,51 @@ const revealToSpan = () => {
     // })
 
 }
+
+const loaderAnimation = () => {
+
+    var tl = gsap.timeline();
+
+    tl
+        .from('.child span', {
+            x: 100,
+            delay: 1,
+            stagger: .2,
+            duration: 1.4,
+            ease: Power3.easeInOut
+        })
+        .to('.parent .child', {
+            y: "-100%",
+            duration: 1,
+            ease: Circ.easeInOut
+        })
+        .to('#loader', {
+            height: 0,
+            duration: 1,
+            ease: Circ.easeInOut
+        })
+        .to('#green', {
+            height: "100%",
+            top: 0,
+            duration: 1,
+            ease: Circ.easeInOut,
+            delay: -1
+        })
+        .to('#green', {
+            height: "0%",
+            duration: 1,
+            ease: Circ.easeInOut,
+            delay: -.4
+        })
+
+}
 revealToSpan()
+// loaderAnimation()
 
-var tl = gsap.timeline();
+gsap.from("g path", {
+    strokeDasharray: 64.68521881103516,
+    strokeDashoffset: 64.68521881103516,
+    duration: 1,
+    ease: Power3
+})
 
-tl
-    .from('.child span', {
-        x: 100,
-        delay: 1,
-        stagger: .2,
-        duration: 1.4,
-        ease: Power3.easeInOut
-    })
-    .to('.parent .child', {
-        y: "-100%",
-        duration: 1,
-        ease: Circ.easeInOut
-    })
-    .to('#loader', {
-        height: 0,
-        duration: 1,
-        ease: Circ.easeInOut
-    })
-    .to('#green', {
-        height: "100%",
-        top: 0,
-        duration: 1,
-        ease: Circ.easeInOut,
-        delay:-1
-    })
-    .to('#green', {
-        height: "0%",
-        duration: 1,
-        ease: Circ.easeInOut,
-        delay: -.4
-    })

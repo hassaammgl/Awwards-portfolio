@@ -55,11 +55,13 @@ tl
     .to('#green', {
         height: "100%",
         top: 0,
-        duration: -.8,
-        ease: Circ.easeInOut
+        duration: 1,
+        ease: Circ.easeInOut,
+        delay:-1
     })
     .to('#green', {
         height: "0%",
-        duration: -.8,
-        ease: Circ.easeInOut
+        duration: 1,
+        ease: Circ.easeInOut,
+        delay: -.4
     })

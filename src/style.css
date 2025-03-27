@@ -17,6 +17,8 @@ body {
 }
 
 #loader {
+	display: none;
+	position: absolute;
 	width: 100%;
 	height: 100vh;
 	background: #111;
@@ -68,11 +70,66 @@ body {
 }
 
 #green {
+	display: none;
 	position: absolute;
 	top: 100%;
 	width: 100%;
 	height: 0vh;
 	background: #14cf93;
+}
+
+#home {
+	width: 100%;
+	height: 200vh;
+	background-color: #dadada;
+}
+
+#home #nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 5vw;
+	width: 100%;
+	height: 100px;
+}
+
+#nav a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 12px;
+	position: relative;
+	color: black;
+	/* display: flex;
+	flex-direction: column;
+	background: #ff4848; */
+}
+.line {
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #111;
+}
+
+#line1 {
+	transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+	transition-delay: 0.2s;
+	left: 0;
+	width: 0%;
+}
+#line2 {
+	transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+	right: 0;
+	width: 100%;
+}
+
+#nav a:hover #line1 {
+	width: 100%;
+}
+#nav a:hover #line2 {
+	width: 0;
 }
 
 /* 

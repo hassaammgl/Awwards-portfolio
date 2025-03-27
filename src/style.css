@@ -187,15 +187,15 @@ body {
 
 #imagery {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 18vw;
+	margin-top: 20vw;
 	width: 100%;
 	padding: 0 7vw;
+	align-items: center;
+	justify-content: space-between;
 }
 #imagery #imglef {
 	width: 30%;
-	padding: 0 7vw;
+	height: auto;
 }
 
 #imglef h1 {
@@ -205,24 +205,48 @@ body {
 }
 
 #imglef h1 span {
+	font-family: "EB Garamond", serif;
 	color: #14cf93;
+	font-weight: 100;
 	font-style: italic;
 }
 
 #imgrig {
+	height: 300px;
 	width: 60%;
-	height: auto;
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* margin-top: 18vw; */
 }
 
 #imgrig .imgcntnr {
 	position: absolute;
-	width: 30vw;
-	height: 45vw;
+	width: 27vw;
+	height: 40vw;
 	border-radius: 1vw;
-	background-color: red;
+	filter: grayscale();
+	transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+#imgrig .imgcntnr:hover {
+	filter: grayscale(0);
+}
+
+#imgrig .imgcntnr:nth-child(1) {
+	transform: translate(-20%, -8%) rotate(-20deg);
+	background-image: url("/last.jpeg");
+	background-size: cover;
+	background-position: center;
+}
+#imgrig .imgcntnr:nth-child(2) {
+	transform: translate(0%, 0%) rotate(-15deg);
+	background-image: url("/second.jpeg");
+	background-size: cover;
+	background-position: center;
+}
+#imgrig .imgcntnr:nth-child(3) {
+	transform: translate(20%, 10%) rotate(-5deg);
+	background-image: url("/front.jpeg");
+	background-size: cover;
+	background-position: center;
 }

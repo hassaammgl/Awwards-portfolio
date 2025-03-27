@@ -1,3 +1,20 @@
+/* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+/* 
+.eb-garamond-<uniquifier> {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* 
+.nunito-<uniquifier> {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -21,6 +38,7 @@ body {
 	position: absolute;
 	width: 100%;
 	height: 100vh;
+	z-index: 9999;
 	background: #111;
 	color: white;
 }
@@ -71,6 +89,7 @@ body {
 
 #green {
 	display: none;
+	z-index: 9999;
 	position: absolute;
 	top: 100%;
 	width: 100%;
@@ -80,7 +99,7 @@ body {
 
 #home {
 	width: 100%;
-	height: 200vh;
+	height: 150vh;
 	background-color: #dadada;
 }
 
@@ -130,20 +149,20 @@ body {
 }
 
 .row {
-	margin-top: 5vw;
+	margin-top: 2vw;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
 	color: #333;
 	padding: 0 7vw;
-	line-height: 1;
+	line-height: 1.1;
 	padding-right: 12vw;
 }
 
 .row h1 {
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-	font-size: 13vw;
+	font-size: 12vw;
 	font-weight: 500;
 }
 
@@ -162,22 +181,48 @@ body {
 }
 
 .row svg {
-	height: 150px;
+	height: 10vw;
 	margin: 0 4vw;
 }
 
-/* 
-.eb-garamond-<uniquifier> {
-  font-family: "EB Garamond", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
+#imagery {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 18vw;
+	width: 100%;
+	padding: 0 7vw;
+}
+#imagery #imglef {
+	width: 30%;
+	padding: 0 7vw;
+}
 
-/* 
-.nunito-<uniquifier> {
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
+#imglef h1 {
+	font-weight: 500;
+	font-size: 2.4vw;
+	color: #333;
+}
+
+#imglef h1 span {
+	color: #14cf93;
+	font-style: italic;
+}
+
+#imgrig {
+	width: 60%;
+	height: auto;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* margin-top: 18vw; */
+}
+
+#imgrig .imgcntnr {
+	position: absolute;
+	width: 30vw;
+	height: 45vw;
+	border-radius: 1vw;
+	background-color: red;
+}

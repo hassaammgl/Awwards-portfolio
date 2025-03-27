@@ -1,6 +1,6 @@
-import gsap, { Circ, Power3 } from "gsap";
+import gsap, { Circ, Power3, Expo } from "gsap";
 
-const revealToSpan = () => {
+function revealToSpan() {
     const h1Elems = document.getElementsByClassName("reveal");
 
     for (let i = 0; i < h1Elems.length; i++) {
@@ -22,28 +22,33 @@ const revealToSpan = () => {
         e.appendChild(spanP);
     }
 
-    // gsap.to(".child", {
-    //     duration: 1,
-    //     transform: "translate(0, 0%)",
-    //     ease: "expo.inOut",
-    //     // stagger: .2
-    // })
-
 }
 
-const loaderAnimation = () => {
+function valueSetters() {
+    document.querySelectorAll("#Visual>g").forEach(function (e) {
+        let charecter = e.childNodes[1].childNodes[1]
+        console.log(charecter);
 
+        charecter.style.strokeDasharray = charecter.getTotalLength() + "px";
+        charecter.style.strokeDashoffset = charecter.getTotalLength() + "px";
+    })
+
+    gsap.set("#nav a", { y: "-100%", opacity: 0 })
+    gsap.set("#home .parent .child", { y: "100%", opacity: 0 })
+    gsap.set("#home .row img", { opacity: 0 })
+}
+
+function loaderAnimation() {
     var tl = gsap.timeline();
-
     tl
-        .from('.child span', {
+        .from('#loader .child span', {
             x: 100,
             delay: 1,
             stagger: .2,
             duration: 1.4,
             ease: Power3.easeInOut
         })
-        .to('.parent .child', {
+        .to('#loader .parent .child', {
             y: "-100%",
             duration: 1,
             ease: Circ.easeInOut
@@ -64,17 +69,51 @@ const loaderAnimation = () => {
             height: "0%",
             duration: 1,
             ease: Circ.easeInOut,
-            delay: -.4
+            delay: -.4,
+            onComplete: () => {
+                animateHomePage()
+            }
         })
 
 }
-revealToSpan()
-// loaderAnimation()
 
-gsap.from("g path", {
-    strokeDasharray: 64.68521881103516,
-    strokeDashoffset: 64.68521881103516,
-    duration: 1,
-    ease: Power3
-})
+function animateSVG() {
+
+    gsap.to("#Visual>g>g>path, #Visual>g>g>polyline", {
+        strokeDashoffset: 0,
+        duration: 1.52,
+        ease: Expo.easeInOut,
+        delay: .5
+    })
+}
+
+function animateHomePage() {
+
+    const tl = gsap.timeline()
+
+    tl
+        .to("#nav a", {
+            y: 0,
+            opacity: 1,
+            stagger: .05,
+            ease: Expo.easeInOut
+        })
+        .to("#home span .child", {
+            y: 0,
+            opacity: 1,
+            stagger: .1,
+            duration: 1.52,
+            ease: Expo.easeInOut
+        })
+        .to("#home .row img", {
+            opacity: 1,
+            ease: Expo.easeInOut,
+            onComplete: () => animateSVG()
+        })
+
+}
+
+revealToSpan()
+valueSetters()
+loaderAnimation()
 

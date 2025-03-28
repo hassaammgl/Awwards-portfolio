@@ -296,6 +296,7 @@ body {
 }
 
 .o-ui-arrow {
+	width: 5vw;
 	transform: rotate(90deg);
 }
 .o-ui-arrow {

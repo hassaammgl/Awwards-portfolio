@@ -29,6 +29,11 @@ body {
 	height: 100%;
 }
 
+.maz {
+	color: #14cf93;
+	font-style: italic;
+}
+
 #main {
 	width: 100%;
 }
@@ -189,7 +194,7 @@ body {
 	display: flex;
 	margin-top: 20vw;
 	width: 100%;
-	padding: 0 7vw;
+	padding: 7vw 7vw;
 	align-items: center;
 	justify-content: space-between;
 }
@@ -252,7 +257,47 @@ body {
 }
 
 #work {
+	padding-top: 150px;
+	position: relative;
 	width: 100%;
 	min-height: 70vh;
 	background-color: #f2f2f2;
+}
+
+#work::before {
+	content: "";
+	position: absolute;
+	top: -75px;
+	width: 100%;
+	height: 150px;
+	transform: rotate(-180deg);
+	background-image: url("rip.svg");
+	background-size: cover;
+}
+
+#work .workrow {
+	padding: 0 12vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.workrow h1 {
+	font-size: 8vw;
+	font-weight: 600;
+	display: flex;
+	align-items: baseline;
+}
+
+.workrow h1 .mini {
+	font-size: 2vw;
+	font-weight: 500;
+	margin-left: 5vw;
+}
+
+.o-ui-arrow {
+	transform: rotate(90deg);
+}
+.o-ui-arrow {
+	stroke: rgb(160, 160, 160);
 }

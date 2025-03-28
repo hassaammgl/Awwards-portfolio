@@ -18,9 +18,10 @@
 			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
 			rel="stylesheet"
 		/>
+		<!-- <link rel="stylesheet" href="./src/locomotive-scroll.css " /> -->
 	</head>
 	<body>
-		<div id="main">
+		<div data-scroll id="main">
 			<div id="loader">
 				<div id="topheading">
 					<h5 class="reveal">Design Portfolio</h5>
@@ -313,13 +314,42 @@
 						</svg>
 					</div>
 					<div id="images">
-						<div id="cnt">
-							<img src="naruto.jpeg" alt="" />
+						<div class="cnt1 cnt">
+							<img
+								data-scroll
+								data-scroll-speed="-1.5"
+								src="hina.jpeg"
+								alt=""
+							/>
 						</div>
+						<div class="cnt2 cnt">
+							<img
+								data-scroll
+								data-scroll-speed="-1.5"
+								src="naruto.jpeg"
+								alt=""
+							/>
+						</div>
+						<!-- <div class="cnt3 cnt">
+							<img
+								data-scroll
+								data-scroll-speed="-1.5"
+								src="luffy.jpeg"
+								alt=""
+							/>
+						</div>
+						<div class="cnt4 cnt">
+							<img
+								data-scroll
+								data-scroll-speed="-1.5"
+								src="Lucy.jpeg"
+								alt=""
+							/>
+						</div> -->
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- <script type="module" src="/src/main.js"></script> -->
+		<script type="module" src="/src/main.js"></script>
 	</body>
 </html>

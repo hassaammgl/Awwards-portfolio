@@ -36,6 +36,7 @@ body {
 
 #main {
 	width: 100%;
+	height: fit-content;
 }
 
 #loader {
@@ -228,6 +229,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 1;
 }
 
 #imgrig .imgcntnr {
@@ -313,16 +315,27 @@ body {
 }
 
 #images {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	margin-top: 6vw;
 	position: relative;
 	width: 100%;
 }
 
-#cnt {
-	width: 55%;
+.cnt {
 	overflow: hidden;
-	border-radius: 50px;
+	border-radius: 60px;
 }
 
-#cnt img {
-	width: 100%;
+.cnt img {
+	width: 105%;
+}
+
+.cnt1 {
+	width: 55%;
+}
+
+.cnt2 {
+	width: 28%;
 }

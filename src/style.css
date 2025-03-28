@@ -320,8 +320,9 @@ body {
 #cnt {
 	width: 55%;
 	overflow: hidden;
+	border-radius: 50px;
 }
 
 #cnt img {
-	
+	width: 100px;
 }

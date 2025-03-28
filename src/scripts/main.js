@@ -1,5 +1,5 @@
 import gsap, { Circ, Power3, Expo } from "gsap";
-import LocomotiveScroll from 'locomotive-scroll';
+import { locoInit } from "./locomotive";
 
 
 function revealToSpan() {
@@ -113,17 +113,6 @@ function animateHomePage() {
             onComplete: () => animateSVG()
         })
 
-}
-
-function locoInit() {
-    const scroll = new LocomotiveScroll({
-        el: document.querySelector('#main'),
-        smooth: true,
-    })
-
-    scroll.on("scroll", (e) => {
-        console.log(e);
-    })
 }
 
 revealToSpan()

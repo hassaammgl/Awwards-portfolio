@@ -40,7 +40,6 @@ body {
 }
 
 #loader {
-	display: none;
 	position: fixed;
 	width: 100%;
 	height: 100vh;
@@ -95,7 +94,6 @@ body {
 }
 
 #green {
-	display: none;
 	z-index: 9999;
 	position: absolute;
 	top: 100%;

@@ -1,5 +1,5 @@
 import gsap, { Circ, Power3, Expo } from "gsap";
-import { locoInit } from "./locomotive";
+// import { locoInit } from "./locomotive";
 
 
 function revealToSpan() {
@@ -118,4 +118,4 @@ function animateHomePage() {
 revealToSpan()
 valueSetters()
 loaderAnimation()
-locoInit()
+// locoInit()
